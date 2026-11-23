@@ -17,11 +17,16 @@ SENTENCE = (
 OUTPUT_PATH = "/output/entry.txt"
 
 
+def get_sentence() -> str:
+    return SENTENCE
+
+
 def main() -> None:
+    sentence = get_sentence()
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
-        f.write(SENTENCE)
-    print(SENTENCE)
+        f.write(sentence)
+    print(sentence)
 
 
 if __name__ == "__main__":
